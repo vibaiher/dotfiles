@@ -40,11 +40,14 @@ DISABLE_AUTO_UPDATE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git github git-flow)
+plugins=(git github git-flow ruby golang)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH="/home/vicente/.go"
+export GOROOT="/usr/local/go"
 alias PokerRed='cd /var/www/vhosts/poker-red.git/'
 alias PokerProManager='cd /var/www/vhosts/pokerpromanager/trunk/'
 alias PokerProMasters='cd /var/www/vhosts/poker_pro_masters/trunk/'

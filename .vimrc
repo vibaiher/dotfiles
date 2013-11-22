@@ -7,6 +7,13 @@ set number
 set nocompatible               " be iMproved
 filetype off                   " required!
 
+" Some Linux distributions set filetype in /etc/vimrc.
+" Clear filetype flags before changing runtimepath to force Vim to reload them.
+filetype plugin indent off
+set rtp+=$GOROOT/misc/vim
+filetype plugin indent on
+syntax on
+
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -32,7 +39,6 @@ Bundle 'FuzzyFinder'
 Bundle 'scrooloose/nerdtree'
 map <C-n> :NERDTreeToggle<CR>
 
-filetype plugin indent on     " required!
 "
 " Brief help
 " :BundleList          - list configured bundles
