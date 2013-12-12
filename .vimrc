@@ -13,6 +13,7 @@ filetype plugin indent off
 set rtp+=$GOROOT/misc/vim
 filetype plugin indent on
 syntax on
+au BufNewFile,BufRead *.test set filetype=php
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -34,6 +35,7 @@ Bundle 'tComment'
 " FuzzyFinder
 Bundle 'L9'
 Bundle 'FuzzyFinder'
+map <C-s-p> :FufCoverageFile<CR>
 
 " NerdTree
 Bundle 'scrooloose/nerdtree'
