@@ -13,7 +13,7 @@ filetype plugin indent off
 set rtp+=$GOROOT/misc/vim
 filetype plugin indent on
 syntax on
-au BufNewFile,BufRead *.test set filetype=php
+au BufNewFile,BufRead *.test,*.install set filetype=php
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
