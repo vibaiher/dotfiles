@@ -48,7 +48,7 @@ source $ZSH/oh-my-zsh.sh
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH="/home/vicente/.go"
 export GOROOT="/usr/local/go"
-alias PokerRed='cd /var/www/vhosts/poker-red/'
+alias PokerRed='cd /var/www/vhosts/poker-red.git/'
 alias PokerProManager='cd /var/www/vhosts/pokerpromanager/trunk/'
 alias PokerProMasters='cd /var/www/vhosts/poker_pro_masters/trunk/'
 alias EducaPoker='cd /var/www/vhosts/educapoker.git/'
