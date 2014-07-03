@@ -48,10 +48,10 @@ source $ZSH/oh-my-zsh.sh
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH="/home/vicente/.go"
 export GOROOT="/usr/local/go"
-alias PokerRed='cd /var/www/vhosts/poker-red.git/'
+alias PokerRed='cd /var/www/vhosts/poker-red/'
 alias PokerProManager='cd /var/www/vhosts/pokerpromanager/trunk/'
 alias PokerProMasters='cd /var/www/vhosts/poker_pro_masters/trunk/'
-alias EducaPoker='cd /var/www/vhosts/educapoker.git/'
+alias EducaPoker='cd /var/www/vhosts/educapoker/'
 alias vhosts='cd /var/www/vhosts/'
 alias Ubuntu="ssh 192.168.9.9"
 alias Backend='cd /var/www/vhosts/backend.educapoker.git/'
