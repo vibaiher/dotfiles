@@ -2,6 +2,8 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+autocmd FileType php setlocal shiftwidth=4 tabstop=4
+
 set number
 
 set nocompatible               " be iMproved
@@ -19,34 +21,41 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'gmarik/Vundle.vim'
 
 " My Bundles here:
 
 " Git integration
-Bundle 'tpope/vim-git'
-Bundle 'tpope/vim-fugitive'
+Plugin 'tpope/vim-git'
+Plugin 'tpope/vim-fugitive'
 
 " Comments
-Bundle 'tlib'
-Bundle 'tComment'
+Plugin 'tlib'
+Plugin 'tComment'
 
 " FuzzyFinder
-Bundle 'L9'
-Bundle 'FuzzyFinder'
+Plugin 'L9'
+Plugin 'FuzzyFinder'
 map <C-s-p> :FufCoverageFile<CR>
 
 " NerdTree
-Bundle 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 map <C-n> :NERDTreeToggle<CR>
 
-"
-" Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
-"
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle command are not allowed..
+map <Left> :echo "no!"<cr>
+map <Right> :echo "no!"<cr>
+map <Up> :echo "no!"<cr>
+map <Down> :echo "no!"<cr>
+
+imap <Left> <NOP>
+imap <Right> <NOP>
+imap <Up> <NOP>
+imap <Down> <NOP>
+
+map <C-h> :tabprevious<CR>
+map <C-l> :tabnext<CR>
+nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
+nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
+
+autocmd BufWritePre * :%s/\s\+$//e
