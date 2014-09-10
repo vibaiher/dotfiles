@@ -58,8 +58,6 @@ map <C-l> :tabnext<CR>
 nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
 nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
 
-imap <Tab> <C-n>
-
 let @t = "O/**@test/vkk="
 let @f = "Opublic function (){}?(i"
 
