@@ -60,5 +60,6 @@ nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
 
 let @t = "O/**@test/vkk="
 let @f = "Opublic function (){}?(i"
+let @d = ":set tabstop=2:set shiftwidth=2"
 
 autocmd BufWritePre * :%s/\s\+$//e
