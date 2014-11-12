@@ -43,7 +43,9 @@ DISABLE_AUTO_UPDATE="true"
 plugins=(git github git-flow tmux tmuxinator vagrant)
 
 export EDITOR='vim'
+export DISABLE_AUTO_TITLE=true
 
 source $ZSH/oh-my-zsh.sh
 source ~/dotfiles/tmuxinator.zsh
+source ~/dotfiles/hub.zsh
 source ~/dotfiles/.aliases
