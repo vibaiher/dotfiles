@@ -40,19 +40,10 @@ DISABLE_AUTO_UPDATE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git github git-flow ruby golang)
+plugins=(git github git-flow tmux tmuxinator vagrant)
+
+export EDITOR='vim'
 
 source $ZSH/oh-my-zsh.sh
-
-# Customize to your needs...
-export PATH=$PATH:/usr/local/go/bin
-export GOPATH="/home/vicente/.go"
-export GOROOT="/usr/local/go"
-alias PokerRed='cd /var/www/vhosts/poker-red/'
-alias PokerProManager='cd /var/www/vhosts/pokerpromanager/trunk/'
-alias PokerProMasters='cd /var/www/vhosts/poker_pro_masters/trunk/'
-alias EducaPoker='cd /var/www/vhosts/educapoker/'
-alias vhosts='cd /var/www/vhosts/'
-alias Ubuntu="ssh 192.168.9.9"
-alias Backend='cd /var/www/vhosts/backend.educapoker.git/'
-alias devicr='cd /var/www/libraries/devicr/'
+source ~/.bin/tmuxinator.zsh
+source ~/.aliases
