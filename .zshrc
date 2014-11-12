@@ -45,5 +45,5 @@ plugins=(git github git-flow tmux tmuxinator vagrant)
 export EDITOR='vim'
 
 source $ZSH/oh-my-zsh.sh
-source ~/.bin/tmuxinator.zsh
-source ~/.aliases
+source ~/dotfiles/tmuxinator.zsh
+source ~/dotfiles/.aliases
