@@ -27,3 +27,6 @@ windows:
   - vagrant:
     - vagrant up
     - vagrant ssh
+  - prototypes:
+    - cd /var/www/vhosts/educapoker-5.0/
+    - php -S localhost:8000
