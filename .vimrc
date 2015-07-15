@@ -30,6 +30,13 @@ Bundle 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-fugitive'
 
+" RSpec integration
+Plugin 'thoughtbot/vim-rspec'
+map <C-r> :call RunCurrentSpecFile()<CR>
+map <C-t> :call RunNearestSpec()<CR>
+map <C-a> :call RunAllSpecs()<CR>
+let g:rspec_command = "!bundle exec rspec {spec}"
+
 " Comments
 Plugin 'tlib'
 Plugin 'tComment'
@@ -42,6 +49,9 @@ map <C-s-p> :FufCoverageFile<CR>
 " NerdTree
 Plugin 'scrooloose/nerdtree'
 map <C-n> :NERDTreeToggle<CR>
+
+" colorschemes
+colorscheme Sunburst
 
 map <Left> :echo "no!"<cr>
 map <Right> :echo "no!"<cr>
