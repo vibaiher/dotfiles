@@ -1,54 +1,56 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim' " required
+
+" My Plugins here:
+
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-git'
+Plugin 'tpope/vim-fugitive'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'tlib'
+Plugin 'tComment'
+Plugin 'L9'
+Plugin 'FuzzyFinder'
+Plugin 'fatih/vim-go'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" My config here:
 set tabstop=2
 set shiftwidth=2
 set expandtab
+set number
 
 autocmd FileType php setlocal shiftwidth=4 tabstop=4
 
-set number
+let mapleader = ","
+let g:mapleader = ","
 
-set nocompatible               " be iMproved
-filetype off                   " required!
-
-" Some Linux distributions set filetype in /etc/vimrc.
-" Clear filetype flags before changing runtimepath to force Vim to reload them.
-filetype plugin indent off
-set rtp+=$GOROOT/misc/vim
-filetype plugin indent on
-syntax on
-au BufNewFile,BufRead *.test,*.install set filetype=php
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#rc()
-
-" let Vundle manage Vundle
-" required!
-Bundle 'gmarik/Vundle.vim'
-
-" My Bundles here:
-
-" Git integration
-Plugin 'tpope/vim-git'
-Plugin 'tpope/vim-fugitive'
+" My maps here:
 
 " RSpec integration
-Plugin 'thoughtbot/vim-rspec'
-map <C-r> :call RunCurrentSpecFile()<CR>
-map <C-t> :call RunNearestSpec()<CR>
-map <C-a> :call RunAllSpecs()<CR>
+au FileType rb nmap <Leader>r :call RunCurrentSpecFile()<CR>
+au FileType rb nmap <Leader>t :call RunNearestSpec()<CR>
+au FileType rb nmap <Leader>a :call RunAllSpecs()<CR>
 let g:rspec_command = "!bundle exec rspec {spec}"
 
-" Comments
-Plugin 'tlib'
-Plugin 'tComment'
-
 " FuzzyFinder
-Plugin 'L9'
-Plugin 'FuzzyFinder'
 map <C-s-p> :FufCoverageFile<CR>
 
 " NerdTree
-Plugin 'scrooloose/nerdtree'
 map <C-n> :NERDTreeToggle<CR>
+
+" golang stuff
+au FileType go nmap <Leader>r <Plug>(go-run)
+au FileType go nmap <Leader>b <Plug>(go-build)
+au FileType go nmap <Leader>t <Plug>(go-test)
+au FileType go nmap <Leader>c <Plug>(go-coverage)
 
 " colorschemes
 colorscheme Sunburst
@@ -68,8 +70,5 @@ map <C-l> :tabnext<CR>
 nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
 nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
 
-let @t = "O/**@test/vkk="
-let @f = "Opublic function (){}?(i"
-let @d = ":set tabstop=2:set shiftwidth=2"
-
+" remove extra whitespaces
 autocmd BufWritePre * :%s/\s\+$//e
