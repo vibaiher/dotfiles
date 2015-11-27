@@ -1,8 +1,7 @@
-alias PokerRed='cd /var/www/vhosts/poker-red/'
-alias PokerProManager='cd /var/www/vhosts/pokerpromanager/trunk/'
-alias PokerProMasters='cd /var/www/vhosts/poker_pro_masters/trunk/'
-alias EducaPoker='cd /var/www/vhosts/educapoker/'
-alias vhosts='cd /var/www/vhosts/'
-alias Ubuntu="ssh 192.168.9.9"
-alias Backend='cd /var/www/vhosts/backend.educapoker.git/'
-alias devicr='cd /var/www/libraries/devicr/'
+alias flywire="cd ~/Development/code/platform"
+alias flybye="cd ~/Development/code/platform; vagrant halt; exit"
+alias vs="vagrant up; vagrant ssh"
+
+alias vibaiher="cd ~/Development/vibaiher"
+alias valenciarb="cd ~/Development/valencia.rb"
+alias vlctechhub="cd ~/Development/vlctechhub"
