@@ -53,7 +53,9 @@ au FileType go nmap <Leader>t <Plug>(go-test)
 au FileType go nmap <Leader>c <Plug>(go-coverage)
 
 " colorschemes
-colorscheme Sunburst
+set t_Co=256
+set background=dark
+colorscheme vividchalk
 
 map <Left> :echo "no!"<cr>
 map <Right> :echo "no!"<cr>
