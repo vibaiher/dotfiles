@@ -20,6 +20,7 @@ Plugin 'fatih/vim-go'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
+syntax enable
 
 " My config here:
 set tabstop=2
