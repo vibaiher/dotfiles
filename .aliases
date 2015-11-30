@@ -5,3 +5,6 @@ alias vs="vagrant up; vagrant ssh"
 alias vibaiher="cd ~/Development/vibaiher"
 alias valenciarb="cd ~/Development/valencia.rb"
 alias vlctechhub="cd ~/Development/vlctechhub"
+
+alias be="bundle exec"
+alias ber="bundle exec rspec"
