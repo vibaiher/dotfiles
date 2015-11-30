@@ -36,9 +36,9 @@ let g:mapleader = ","
 " My maps here:
 
 " RSpec integration
-au FileType rb nmap <Leader>r :call RunCurrentSpecFile()<CR>
-au FileType rb nmap <Leader>t :call RunNearestSpec()<CR>
-au FileType rb nmap <Leader>a :call RunAllSpecs()<CR>
+au FileType ruby nmap <Leader>r :call RunCurrentSpecFile()<CR>
+au FileType ruby nmap <Leader>t :call RunNearestSpec()<CR>
+au FileType ruby nmap <Leader>a :call RunAllSpecs()<CR>
 let g:rspec_command = "!bundle exec rspec {spec}"
 
 " FuzzyFinder
