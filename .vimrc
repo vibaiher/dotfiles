@@ -15,8 +15,9 @@ Plugin 'thoughtbot/vim-rspec'
 Plugin 'tlib'
 Plugin 'tComment'
 Plugin 'L9'
-Plugin 'FuzzyFinder'
-Plugin 'fatih/vim-go'
+
+Plugin 'bling/vim-airline'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -32,6 +33,7 @@ autocmd FileType php setlocal shiftwidth=4 tabstop=4
 
 let mapleader = ","
 let g:mapleader = ","
+let g:airline_powerline_fonts = 1
 
 " My maps here:
 
@@ -41,17 +43,8 @@ au FileType ruby nmap <Leader>t :call RunNearestSpec()<CR>
 au FileType ruby nmap <Leader>a :call RunAllSpecs()<CR>
 let g:rspec_command = "!bundle exec rspec {spec}"
 
-" FuzzyFinder
-map <C-s-p> :FufCoverageFile<CR>
-
 " NerdTree
 map <C-n> :NERDTreeToggle<CR>
-
-" golang stuff
-au FileType go nmap <Leader>r <Plug>(go-run)
-au FileType go nmap <Leader>b <Plug>(go-build)
-au FileType go nmap <Leader>t <Plug>(go-test)
-au FileType go nmap <Leader>c <Plug>(go-coverage)
 
 " colorschemes
 set t_Co=256
