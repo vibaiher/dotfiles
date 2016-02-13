@@ -19,6 +19,8 @@ Plugin 'L9'
 Plugin 'bling/vim-airline'
 Plugin 'ctrlpvim/ctrlp.vim'
 
+Plugin 'elixir-lang/vim-elixir'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 syntax enable
