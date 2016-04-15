@@ -46,3 +46,6 @@ mkdir -p $HOME/.vim/tmp
 check_and_install_vundle
 check_and_link_file ".vimrc"
 ln -s $dotfiles_path/.vim/colors/vividchalk.vim ~/.vim/colors/vividchalk.vim
+
+# git
+check_and_link_file ".gitconfig"
