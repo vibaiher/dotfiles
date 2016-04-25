@@ -22,7 +22,7 @@ function check_and_install_oh_my_zsh() {
     /usr/bin/env git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
     echo "Setting default shell to zsh. Please enter your password."
-    sudo chsh -s `wich zsh` `whoami`
+    sudo chsh -s `which zsh` `whoami`
   fi
 }
 
