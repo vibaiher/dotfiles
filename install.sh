@@ -15,17 +15,6 @@ function check_and_link_file() {
   echo "Linked ~/$path"
 }
 
-function check_and_install_oh_my_zsh() {
-  if [ ! -d ~/.oh-my-zsh ]
-  then
-    echo "Cloning Oh My Zsh..."
-    /usr/bin/env git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-
-    echo "Setting default shell to zsh. Please enter your password."
-    sudo chsh -s `which zsh` `whoami`
-  fi
-}
-
 function check_and_install_vundle() {
   if [ ! -d ~/.vim/bundle/Vundle.vim ]
   then
@@ -34,11 +23,6 @@ function check_and_install_vundle() {
   fi
 }
 
-# ZSH
-check_and_install_oh_my_zsh
-check_and_link_file ".zshrc"
-check_and_link_file ".aliases"
-
 # VIM
 mkdir -p $HOME/.vim/bundle
 mkdir -p $HOME/.vim/colors
@@ -46,6 +30,3 @@ mkdir -p $HOME/.vim/tmp
 check_and_install_vundle
 check_and_link_file ".vimrc"
 ln -s $dotfiles_path/.vim/colors/vividchalk.vim ~/.vim/colors/vividchalk.vim
-
-# git
-check_and_link_file ".gitconfig"

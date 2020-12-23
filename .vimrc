@@ -10,16 +10,15 @@ Plugin 'VundleVim/Vundle.vim' " required
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-git'
+Plugin 'tpope/vim-vividchalk'
 Plugin 'tpope/vim-fugitive'
-Plugin 'thoughtbot/vim-rspec'
 Plugin 'tlib'
 Plugin 'tComment'
 Plugin 'L9'
 
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ctrlpvim/ctrlp.vim'
-
-Plugin 'elixir-lang/vim-elixir'
 
 call vundle#end()            " required
 filetype plugin indent on    " required

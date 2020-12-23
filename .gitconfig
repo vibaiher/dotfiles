@@ -1,7 +1,0 @@
-[user]
-	name = Vicente Baixauli
-	email = vibaiher@gmail.com
-[push]
-	default = simple
-[pull]
-	rebase = true
